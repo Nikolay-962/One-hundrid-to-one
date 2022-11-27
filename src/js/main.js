@@ -42,30 +42,30 @@ function clearStorge() {
 let question = document.querySelector('.question');
 question.addEventListener('click', () => {
   question.classList.toggle('is-flipped');
-  start.value += allOne;
-  end.value += allTwo;
+  start.textContent += allOne;
+  end.textContent += allTwo;
 
 })
 
 
-let startOne = start.value;
-let endOne = end.value;
+let startOne = start.textContent;
+let endOne = end.textContent;
 startOne = Number(startOne);
 endOne = Number(endOne)
 //console.log(typeof startOne)
 
 start.addEventListener('click', () => {
-  start.value += sum;
+  start.textContent += sum;
   out.textContent = '';
   check();
-  localStorage.setItem('ball-1', start.value);
+  localStorage.setItem('ball-1', start.textContent);
 })
 
 end.addEventListener('click', () => {
-  end.value += sum;
+  end.textContent += sum;
   out.textContent = '';
   check();
-  localStorage.setItem('ball-2', end.value);
+  localStorage.setItem('ball-2', end.textContent);
 })
 
 
