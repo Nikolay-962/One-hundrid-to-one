@@ -16,11 +16,12 @@ for (let i = 0; i < card.length; i++) {
     out.innerHTML = sum;
   })
 };
-
+/*
 function clearStorge() {
   localStorage.clear();
 }
-
+*/
+// считает баллы.
 let error = document.querySelectorAll('.error-btn');
 for (let i = 0; i < error.length; i++) {
   let er = error[i];
@@ -38,7 +39,7 @@ allTwo = Number(allTwo);
 function clearStorge() {
   localStorage.removeItem();
 }
-
+// переходит на следующую страницу и показывает local storige
 let question = document.querySelector('.question');
 question.addEventListener('click', () => {
   question.classList.toggle('is-flipped');
@@ -47,28 +48,25 @@ question.addEventListener('click', () => {
 
 })
 
-
 let startOne = start.textContent;
 let endOne = end.textContent;
 startOne = Number(startOne);
 endOne = Number(endOne)
 //console.log(typeof startOne)
-
+// при клике сумма переходит в левое поле.
 start.addEventListener('click', () => {
   start.textContent += sum;
   out.textContent = '';
   check();
   localStorage.setItem('ball-1', start.textContent);
 })
-
+//при клике в правое поле
 end.addEventListener('click', () => {
   end.textContent += sum;
   out.textContent = '';
   check();
   localStorage.setItem('ball-2', end.textContent);
 })
-
-
 
 function check() {
   sum = '';
