@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('_head.html',{
+"title": "Главная"})
+
+<body>
+  @@include('_header.html',{"title": "Сто к одному"})
+  <div class="page" id="#">
+    <div class="container">
+      <div class="questions">
+        <div class="questions__wrap">
+          <div class="question">
+            <div class="fase"></div>
+            <div class="description ">Как дела?</div>
+          </div>
+          <a href="./page-one.html" class="question-btn"></a>
+        </div>
+      </div>
+      <div class="balls">
+        <div class="balls__wrap">
+          <input class="ball start"></input>
+          <div class="ball middle"></div>
+          <input class="ball end"></input>
+
+        </div>
+      </div>
+      <div class="answers">
+        <div class="answers__wrap">
+          <div class="error-btn error-btn--one"></div>
+          <div class="error-btn error-btn--two"></div>
+          <div class="error-btn error-btn--three"></div>
+          <div class="error-btn error-btn--four"></div>
+          <div class="error-btn error-btn--five"></div>
+          <div class="error-btn error-btn--six"></div>
+          @@include('_card.html', {"num": "1", "text": "Прекрасно", "col": "43"})
+          @@include('_card.html', {"num": "2", "text": "Так себе", "col": "40"})
+          @@include('_card.html', {"num": "3", "text": "Не очень", "col": "30"})
+          @@include('_card.html', {"num": "4", "text": "Замечательно", "col": "20"})
+          @@include('_card.html', {"num": "5", "text": "Сносно", "col": "10"})
+          @@include('_card.html', {"num": "6", "text": "Плохо", "col": "4"})
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

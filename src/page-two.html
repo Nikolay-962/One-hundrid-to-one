@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html',{
+"title": "Two"})
+
+<body>
+  @@include('_header.html', {"title": "Двойная игра"})
+  <div class="page" id="two">
+    <div class="container">
+      <div class="questions">
+        <div class="questions__wrap">
+          <div class="question">
+            <div class="fase"></div>
+            <div class="description ">Назовите животное, упомянутое в Библии</div>
+          </div>
+          <div class="quest-btn"><a href="./page-three.html" class="question-btn"></a></div>
+        </div>
+      </div>
+      <div class="balls">
+        <div class="balls__wrap">
+          <input class="ball start"></input>
+          <div class="ball middle"></div>
+          <input class="ball end"></input>
+        </div>
+      </div>
+      <div class="answers">
+        <div class="answers__wrap">
+          <div class="error-btn error-btn--one"></div>
+          <div class="error-btn error-btn--two"></div>
+          <div class="error-btn error-btn--three"></div>
+          <div class="error-btn error-btn--four"></div>
+          <div class="error-btn error-btn--five"></div>
+          <div class="error-btn error-btn--six"></div>
+          @@include('_card.html', {"num": "1", "text": "Осёл", "col": "29"})
+          @@include('_card.html', {"num": "2", "text": "Лев", "col": "24"})
+          @@include('_card.html', {"num": "3", "text": "Овца", "col": "17"})
+          @@include('_card.html', {"num": "4", "text": "Медведь", "col": "7"})
+          @@include('_card.html', {"num": "5", "text": "Верблюд", "col": "5"})
+          @@include('_card.html', {"num": "6", "text": "Левиафан", "col": "4"})
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </div>
+  <script src="js/main.min.js"></script>
+</body>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('_head.html',{
+"title": "four"})
+
+<body>
+  @@include('_header.html', {"title": "Игра наоборот"})
+  <div class="page" id="four">
+    <div class="container">
+      <div class="questions">
+        <div class="questions__wrap">
+          <div class="question">
+            <div class="fase"></div>
+            <div class="description ">Часть тела, упомянутая в Библии</div>
+          </div>
+          <div class="quest-btn"><a href="./page-five.html" class="question-btn"></a></div>
+        </div>
+      </div>
+      <div class="balls">
+        <div class="balls__wrap">
+          <div class="ball start"></div>
+          <div class="ball middle"></div>
+          <div class="ball end"></div>
+        </div>
+      </div>
+      <div class="answers">
+        <div class="answers__wrap">
+          <div class="error-btn error-btn--one"></div>
+          <div class="error-btn error-btn--two"></div>
+          <div class="error-btn error-btn--three"></div>
+          <div class="error-btn error-btn--four"></div>
+          <div class="error-btn error-btn--five"></div>
+          <div class="error-btn error-btn--six"></div>
+          @@include('_card.html', {"num": "1", "text": "Глаз (15 баллов)", "col": "28"})
+          @@include('_card.html', {"num": "2", "text": "Сердце (30 баллов)", "col": "24"})
+          @@include('_card.html', {"num": "3", "text": "Рука (60 баллов)", "col": "15"})
+          @@include('_card.html', {"num": "4", "text": "Ухо (120 баллов)", "col": "9"})
+          @@include('_card.html', {"num": "5", "text": "Почки (180 баллов)", "col": "6"})
+          @@include('_card.html', {"num": "6", "text": "Голова (240 бвллов)", "col": "5"})
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/main.min.js"></script>
+</body>
