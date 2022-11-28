@@ -129,17 +129,18 @@ function svg() {
     .pipe(browsersync.stream())
 };
 
-
 // Скрипты
 function js() {
   return gulp
     .src(path.src.js)
+    .pipe(fileinclude())
+    .pipe(dest(path.build.js))
     .pipe(uglify())
     .pipe(rigger())
     .pipe(rename({
       extname: ".min.js"
     }))
-    .pipe(dest(path.build.js))
+    //.pipe(dest(path.build.js))
     .pipe(browsersync.stream())
 }
 
