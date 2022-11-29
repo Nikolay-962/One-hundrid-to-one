@@ -22,13 +22,13 @@ card.forEach((element) => {
 start.addEventListener('click', () => {
   start.textContent = totalSum(allOne, totalOut);
   out.textContent = '';
-  localStorage.setItem('ball-1', start.textContent);
+  sessionStorage.setItem('ball-1', start.textContent);
 })
 
 end.addEventListener('click', () => {
   end.textContent = totalSum(allTwo, totalOut);
   out.textContent = '';
-  localStorage.setItem('ball-2', end.textContent);
+  sessionStorage.setItem('ball-2', end.textContent);
 })
 
 let error = document.querySelectorAll('.error-btn');
@@ -39,8 +39,8 @@ for (let i = 0; i < error.length; i++) {
   })
 };
 
-let allOne = localStorage.getItem('ball-1');
-let allTwo = localStorage.getItem('ball-2');
+let allOne = sessionStorage.getItem('ball-1');
+let allTwo = sessionStorage.getItem('ball-2');
 allOne = Number(allOne);
 allTwo = Number(allTwo);
 
