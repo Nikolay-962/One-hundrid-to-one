@@ -17,6 +17,7 @@ card.forEach((element) => {
     element.classList.toggle('is-flipped');
     out.textContent = sum(totalOut, value);
     totalOut = sum(totalOut, value);
+    lineOpen()
   });
 })
 start.addEventListener('click', () => {
@@ -36,8 +37,25 @@ for (let i = 0; i < error.length; i++) {
   let er = error[i];
   er.addEventListener('click', () => {
     er.classList.toggle('visual');
+    ansverError();
   })
 };
+function nextRound() {
+  let audio = document.getElementById("next-round");
+  audio.src = 'sounds/next-round.mp3';
+  return;
+}
+
+function lineOpen() {
+  let audio = document.getElementById("line-open");
+  audio.src = 'sounds/line-open.mp3';
+  return;
+}
+function ansverError() {
+  let audio = document.getElementById("error");
+  audio.src = 'sounds/error.mp3';
+  return;
+}
 
 let allOne = sessionStorage.getItem('ball-1');
 let allTwo = sessionStorage.getItem('ball-2');
@@ -49,6 +67,7 @@ question.addEventListener('click', () => {
   question.classList.toggle('is-flipped');
   start.textContent = totalSum(allOne, totalOut);
   end.textContent = totalSum(allTwo, totalOut);
+  nextRound()
 })
 
 const totalSum = (a, b) => {

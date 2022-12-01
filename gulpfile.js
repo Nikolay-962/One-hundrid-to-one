@@ -29,20 +29,23 @@ let path = {
     js: project_folder + '/js/',
     css: project_folder + '/css/',
     img: project_folder + '/img/',
-    svg: project_folder + "/img/svg/"
+    svg: project_folder + "/img/svg/",
+    sounds: project_folder + "/sounds"
   },
   src: {
     html: [source_folder + "/*.html", "!" + source_folder + "/_*.html"],
     js: source_folder + '/js/*.js',
     style: source_folder + '/style/*.scss',
     img: source_folder + '/img/**/*.*',
-    svg: source_folder + "/img/svg/*.svg"
+    svg: source_folder + "/img/svg/*.svg",
+    sounds: source_folder + "/sounds/*.mp3"
   },
   watch: {
     html: source_folder + '/**/*.html',
     js: source_folder + '/js/**/*.js',
     style: source_folder + '/style/**/*.scss',
     img: source_folder + '/img/**/*.*{jpg,jpeg,png,webp,svg}',
+    sounds: source_folder + "/sounds/*.mp3",
     svg: source_folder + "/img/svg/*.svg"
   },
   clean: "./" + project_folder + "/"
@@ -105,6 +108,12 @@ function images() {
     .pipe(browsersync.stream())
 }
 
+function song() {
+  return src(path.src.sounds)
+    .pipe(dest(path.build.sounds))
+    .pipe(browsersync.stream())
+}
+
 // SVG
 var svgConfig = {
   mode: {
@@ -154,11 +163,13 @@ function watchFiles() {
   gulp.watch([path.watch.img], images);
   gulp.watch([path.watch.img], svg);
   gulp.watch([path.watch.js], js);
+  gulp.watch([path.watch.sounds], song);
 }
 
-let build = gulp.series(clean, gulp.parallel(js, style, html, images, svg));
+let build = gulp.series(clean, gulp.parallel(js, style, html, images, svg, song));
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
+exports.song = song;
 exports.svg = svg;
 exports.images = images;
 exports.js = js;
