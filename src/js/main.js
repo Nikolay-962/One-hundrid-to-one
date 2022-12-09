@@ -14,7 +14,7 @@ const sum = (a, b) => {
 card.forEach((element) => {
   const value = element.querySelector('.number').innerHTML;
   element.addEventListener('click', () => {
-    element.classList.toggle('is-flipped');
+    element.classList.add('is-flipped');
     out.textContent = sum(totalOut, value);
     totalOut = sum(totalOut, value);
     lineOpen()
@@ -45,15 +45,22 @@ function nextRound() {
   audio.src = 'sounds/next-round.mp3';
   return;
 }
+let startGame = document.querySelector('.title-one');
+startGame.addEventListener('click', () => {
+  document.getElementById('next-round').play();
 
+})
 function lineOpen() {
-  let audio = document.getElementById("line-open");
-  audio.src = 'sounds/line-open.mp3';
+  //let audio = document.getElementById("line-open");
+  document.getElementById('line-open').play();
+  //audio.src = 'sounds/line-open.mp3';
   return;
 }
 function ansverError() {
-  let audio = document.getElementById("error");
-  audio.src = 'sounds/error.mp3';
+  //let audio = document.getElementById("error");
+  document.getElementById('error').play();
+  //audio.src = 'sounds/error.mp3';
+
   return;
 }
 
@@ -67,7 +74,7 @@ question.addEventListener('click', () => {
   question.classList.toggle('is-flipped');
   start.textContent = totalSum(allOne, totalOut);
   end.textContent = totalSum(allTwo, totalOut);
-  nextRound()
+  //nextRound()
 })
 
 const totalSum = (a, b) => {
