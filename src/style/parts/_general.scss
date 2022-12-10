@@ -34,7 +34,9 @@ body {
   padding: 0;
   font-size: 14px;
   line-height: 1.3;
-  background-color: rgb(5, 129, 123);
+  //background-color: rgb(5, 129, 123);
+  background-image: url('../img/bg.jpg');
+  //background-color: #664B9F;
   font-family: 'Patua One', cursive;
   font-family: 'Roboto Slab', serif;
 }
@@ -49,13 +51,14 @@ body {
 }
 
 .title-one {
-  color: rgb(65, 17, 238);
+  color: #EFE2A5;
   text-align: center;
-  background-color: rgb(246, 250, 37);
+  background-color: #1F0044;
   padding: 16px 0;
   border-radius: 10px;
-  letter-spacing: .4em;
+  letter-spacing: .2em;
   font-size: 40px;
+  text-transform: uppercase;
 }
 
 
@@ -64,7 +67,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(5, 129, 123);
+    background-color: #080013;
     color: rgb(17, 104, 10);
     border-radius: 10px;
   }
@@ -81,7 +84,7 @@ body {
   transition: 1s;
   transform-style: preserve-3d;
   cursor: pointer;
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px #7c7b7b;
 }
 
 .fase,
@@ -97,12 +100,12 @@ body {
 }
 
 .fase {
-  background-color: rgb(198, 14, 235);
+  background-color: rgb(199, 189, 88);
   padding: 20px;
 }
 
 .description {
-  background-color: rgb(146, 3, 127);
+  background-color: #964ede;
   transform: rotateX(180deg);
   color: #fff;
   text-align: center;
@@ -110,8 +113,8 @@ body {
 
 .error-btn {
   position: absolute;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   background-color: rgb(248, 24, 8);
   border: 1px solid rgb(10, 10, 10);
   border-radius: 6px;
@@ -122,21 +125,21 @@ body {
   &::after {
     content: "";
     position: absolute;
-    width: 80px;
+    width: 86px;
     height: 6px;
     background-color: rgb(0, 0, 0);
   }
 
   &::before {
     transform: rotate(45deg);
-    top: 16px;
-    left: -18px;
+    top: 24px;
+    left: -17px;
   }
 
   &::after {
     transform: rotate(-45deg);
-    top: 16px;
-    left: -18px;
+    top: 24px;
+    left: -19px;
   }
 
   &--one {
@@ -175,8 +178,8 @@ body {
   position: absolute;
   top: 4.4%;
   right: 10.4%;
-  border: 1px solid rgba(255, 255, 255, 0.432);
-  background-color: rgb(246, 250, 37);
+  border: 1px solid rgba(20, 65, 243, 0.432);
+  background-color: #1f004a;
   width: 60px;
   height: 60px;
   border-radius: 6px;
@@ -219,7 +222,7 @@ body {
   color: #fff;
   text-align: center;
   font-weight: 600;
-  background-color: rgb(5, 129, 123);
+  background-color: #1f004a;
 }
 
 .answers {
@@ -248,7 +251,7 @@ body {
   transition: 1s;
   transform-style: preserve-3d;
   cursor: pointer;
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px #555297;
 }
 
 .front,
@@ -265,14 +268,14 @@ body {
 
 
 .front {
-  background-color: rgb(67, 70, 243);
+  background-color: #CC84AB;
   text-align: center;
   font-weight: 800;
   padding: 20px;
 }
 
 .back {
-  background-color: rgb(5, 5, 5);
+  background-color: #050505;
   transform: rotateX(180deg);
   padding-left: 20px;
   color: #fff;

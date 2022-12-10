@@ -48,7 +48,6 @@ function nextRound() {
 let startGame = document.querySelector('.title-one');
 startGame.addEventListener('click', () => {
   document.getElementById('next-round').play();
-
 })
 function lineOpen() {
   //let audio = document.getElementById("line-open");
