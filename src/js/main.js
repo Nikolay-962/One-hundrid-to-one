@@ -14,7 +14,7 @@ const sum = (a, b) => {
 card.forEach((element) => {
   const value = element.querySelector('.number').innerHTML;
   element.addEventListener('click', () => {
-    element.classList.add('is-flipped');
+    element.classList.toggle('is-flipped');
     out.textContent = sum(totalOut, value);
     totalOut = sum(totalOut, value);
     lineOpen()
@@ -80,4 +80,11 @@ const totalSum = (a, b) => {
   return Number(a) + Number(b);
 }
 
-
+let infoFile = document.querySelector('.file');
+let button = document.querySelector('.button-oll');
+let on = document.getElementById('on');
+//button.onclick = function () {
+  //let oll  = infoFile.value;
+  //on.innerHTML = oll;
+  //infoFile.value = '';
+//}
